@@ -1,0 +1,20 @@
+services:
+  config-diff:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - config_storage:/app/stored_configs
+      - log_storage:/app/logs
+    environment:
+      - FLASK_ENV=production
+      - FLASK_DEBUG=0
+      - LOG_LEVEL=INFO
+      - LOG_FILE=/app/logs/config_diff.log
+    restart: unless-stopped
+
+volumes:
+  config_storage:
+    driver: local
+  log_storage:
+    driver: local
