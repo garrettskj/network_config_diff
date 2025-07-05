@@ -1,6 +1,6 @@
 # Network Device Configuration Comparison Tool
 
-A modern web application for comparing network device configurations with SSH connectivity, built with Flask, netmiko, and comprehensive testing.
+A modern web application for comparing network device configurations with File and SSH connectivity, built with Flask, netmiko, and comprehensive testing.
 
 ## Features
 
@@ -19,14 +19,14 @@ A modern web application for comparing network device configurations with SSH co
 
 ```
 config_diff/
- app.py                 # Flask web application
- lib/
-    network_client.py  # SSH connectivity & device management
-    config_diff.py     # Configuration comparison & diff generation
- templates/             # HTML templates
- tests/                 # Comprehensive test suite (42 tests)
- Dockerfile            # Production container setup
- docker-compose.yml    # Container orchestration
+   app.py                 # Flask web application
+   lib/
+      network_client.py  # SSH connectivity & device management
+      config_diff.py     # Configuration comparison & diff generation
+   templates/             # HTML templates
+   tests/                 # Comprehensive test suite (42 tests)
+   Dockerfile            # Production container setup
+   docker-compose.yml    # Container orchestration
 ```
 
 ## Quick Start
@@ -281,3 +281,4 @@ MIT License - See LICENSE file for details.
 - **ruff** - Fast Python linter
 
 For complete dependency list, see `pyproject.toml`.
+
